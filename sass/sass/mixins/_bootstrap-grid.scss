@@ -160,6 +160,49 @@ $container-lg: $container-large-desktop !default;
         right: percentage(($columns / $grid-columns));
     }
 }
+
+// -----------------   flex grid 設定   ----------------- 2020/05/05
+
+// flex gutter 設定是 margin
+// %grid_flex_setting {
+//     margin-left: ($grid-gutter-width-margin / 2);
+//     margin-right: ($grid-gutter-width-margin / 2);
+// }
+%flex_setting {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex-xs-column($columns) {
+    @media (min-width: $screen-xs-min) {
+        flex-basis: percentage(($columns / $grid-columns));
+        max-width: percentage(($columns / $grid-columns));
+    }
+}
+@mixin flex-sm-column($columns) {
+    @media (min-width: $screen-sm-min) {
+        flex-basis: percentage(($columns / $grid-columns));
+        max-width: percentage(($columns / $grid-columns));
+    }
+}
+@mixin flex-md-column($columns) {
+    @media (min-width: $screen-md-min) {
+        flex-basis: percentage(($columns / $grid-columns));
+        max-width: percentage(($columns / $grid-columns));
+    }
+}
+
+@mixin flex-lg-column($columns) {
+    @media (min-width: $screen-lg-min) {
+        flex-basis: percentage(($columns / $grid-columns));
+        max-width: percentage(($columns / $grid-columns));
+    }
+}
+// -----------------         end       -----------------
+
 .row {
     @include make-row();
     &>div {

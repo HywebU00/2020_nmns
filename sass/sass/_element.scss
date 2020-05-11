@@ -23,14 +23,17 @@ a:focus {
 // more按鈕
 a.more {
     display: block;
-    width: 10em;
-    text-align: center;
-    height: 2.5em;
-    margin: .5em auto .5em;
-    line-height: 2.5;
-    color: $primaryColor;
-    border: 1px solid $primaryColor;
-    text-align: center;
+    float: right;
+    margin-right: -1.25em;
+    width: 12em;
+    height: 3em;
+    // margin: .5em auto .5em;
+    line-height: 3;
+    color: #fff;
+    background: $secondaryColor;
+    // border: 1px solid $secondaryColor;
+    // text-align: center;
+    padding: 0 2em;   
     overflow: hidden;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -43,16 +46,19 @@ a.more {
     transition-duration: 0.2s;
     &:after {
         content: "";
-        width: 12px;
-        height: 12px;
-        border: 2px solid #FFF;
-        transform: rotate(45deg);
+        // width: 12px;
+        // height: 12px;
+        // border: 2px solid #FFF;
+        // transform: rotate(45deg);
         position: absolute;
-        right: -10px;
+        width: 34px;
+        height: 14px;
+        background: url(../images/icon-more-arrow.png) 50% 50% no-repeat;
+        left: 50%;
         top: 14px;
-        border-left: none;
-        border-bottom: none;
-        transition: .3s ease-out;
+        // border-left: none;
+        // border-bottom: none;
+        transition: left .3s ease-out;
     }
     &:before {
         content: "";
@@ -63,25 +69,22 @@ a.more {
         right: 0;
         bottom: 0;
         background: $primaryColor;
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        -webkit-transition-property: transform;
-        transition-property: transform;
-        -webkit-transition-duration: 0.2s;
-        transition-duration: 0.2s;
-        -webkit-transition-timing-function: ease-out;
-        transition-timing-function: ease-out;
+        width: 0;
+
+        -webkit-transition: width .2s ease-out;
+        transition: width .2s ease-out;
     }
     &:hover,
     &:focus,
     &.active {
         color: white;
         &:before {
-            -webkit-transform: scale(1);
-            transform: scale(1);
+            // -webkit-transform: scale(1);
+            // transform: scale(1);
+            width: 100%;
         }
         &:after {
-            right: 15px;
+            left: calc(100% - 4em);
         }
     }
 }

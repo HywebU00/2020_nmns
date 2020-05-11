@@ -2,14 +2,26 @@ footer {
     @include box-sizing(border-box);
     @include clearfix;
     text-align: left;
-    font-size: 0.813em;
+    font-size: 1em;
     padding: 1em 0;
-    .container {
-        @include gutter;
-        >div {
-            padding-bottom: 1em;
-        }
+
+    background: url(../images/dot-white.jpg) left 0 bottom 3.3em repeat-x, $primaryColor;
+    color: #3e3e3e;
+
+    // .container {
+    //     @include gutter;
+    //     >div {
+    //         padding-bottom: 1em;
+    //     }
+    // }
+
+    .container{
+        @extend %flex_setting;
+        flex-flow: row wrap;
+
+        // @include gutter;
     }
+
     a {
         text-decoration: none;
         color: $primaryColor;
@@ -18,82 +30,104 @@ footer {
             color: darken($primaryColor, 10);
         }
     }
-    .footer_logo {
-        @include make-xs-column(8);
-        @include make-sm-column(3);
-        @include make-md-column(3);
-        @include make-lg-column(3);
-        @include gutter();
+    // logo、連結
+    .footer_logo,
+    .footer_link{
+        @include flex-xs-column(12);
+        @include flex-sm-column(12);
+        @include flex-md-column(6);
+        @include flex-lg-column(6);
     }
-    .footer_info {
-        @include make-xs-column(12);
-        @include make-sm-column(6);
-        @include make-md-column(6);
-        @include make-lg-column(6);
-        @include gutter();
+
+    .footer_logo{
+        @extend %flex_setting;
+        align-items: center;
+
+        img{ height: 90px; }
+        p{
+            @include gutter;
+            margin: 0;
+            font-size: 112.5%;
+
+            span{ font-size: 60%; }
+        }
     }
-    .footer_icon {
-        @include make-xs-column(12);
-        @include make-sm-column(3);
-        @include make-md-column(3);
-        @include make-lg-column(3);
-        @include gutter();
-    }
-    // 版權連結
+
+    // 連結
     .footer_link {
-        @include li-reset();
-        @include clearfix();
+        @extend %flex_setting;
+        justify-content: flex-end;
+        align-items: center;
+
+        ul{
+            @include li-reset();
+
+            @extend %flex_setting;
+            justify-content: flex-end;
+            align-items: center;
+        }
         li {
-            float: left;
             display: block;
-            margin: 0px 5px 5px 0px;
+            margin: .5px 1px;
+
+            &:last-child{ box-shadow: none; }
+
             a {
                 display: block;
                 padding: .5em 1em;
-                background: $primaryColor;
-                color: #FFF;
+                background: darken($primaryColor ,8%);
+                font-size: 90%;
+                color: #fff;
                 border-radius:4px;
                 @include transition(all, .3s, ease-out);
-                &:hover,
-                &:focus {
-                    background: darken($primaryColor, 10);
+            }
+            &:hover,
+            &:focus {
+                a{
+                    background: darken($primaryColor, 15);
+                    color: #fff;
                 }
             }
         }
     }
-    p {
-        line-height: 1.65em;
-    }
-    .update,
-    .counter {
-        display: inline-block;
-        margin-right: 5px;
-        em {
-            font-style: normal;
-            color: $primaryColor;
-            padding: 0 .5em;
-        }
-    }
-    .footer_icon {
-        a {
-            display: inline-block;
-            vertical-align: top;
-            position:relative;
-             &:focus {
-                &:after {
-                    content: "";
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    box-shadow: 0px 0px 0px 1px $aHover inset;
-                    z-index: 99;
-                }
+
+    // 基金會資訊
+    .footer_info {
+        flex: 1 1 auto;
+        font-size: 90%;
+        p{
+            padding-left: 105px;
+            margin: 0;
+
+            &.Copyright{
+                margin-top: 2em;
             }
         }
-        img {
-            max-width: 120px;
-        }
+    }
+
+    p {}
+
+    @media screen and (max-width: 1024px) {
+        @include gutter();
+    }
+    @include screen('tablet') {
+         .footer_link{
+            justify-content: flex-start;
+            padding-left: 105px;
+            margin-bottom: 1em;
+         }
+    }
+    @media screen and (max-width: 1024px) {
+        background: url(../images/dot-white.jpg) left 0 bottom 4.8em repeat-x, $primaryColor;
+    }
+    @media screen and (max-width: 320px) {
     }
 }
+
+
+
+
+
+
+
+

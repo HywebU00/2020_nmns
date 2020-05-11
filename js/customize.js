@@ -4,10 +4,10 @@ $(function() {
     $('.mpSlider').slick({
         mobileFirst: true,
         dots: true,
-        arrow: true,
+        arrow: false,
         infinite: true,
         speed: 500,
-        autoplay: true,
+        autoplay: false,
         fade: true,
         lazyLoaded: true,
         lazyLoad: 'ondemand',

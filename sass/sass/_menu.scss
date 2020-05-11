@@ -10,17 +10,19 @@
         text-align: left;
         margin: 0;
         padding: 0;
+        padding-left: 90px;
         // 第一層選單樣式
         >li {
             display: inline-block;
             vertical-align: top;
-            min-width: 10em;
+            // min-width: 10em;
             >a {
                 display: block;
                 padding: 0 1em;
-                min-height: 2.5em;
+                // min-height: 2.5em;
+                font-size: 1.125em;
                 font-weight: bold;
-                line-height: 2.5em;
+                line-height: 4em;
                 color: $color-word;
             }
             &.hasChild {
@@ -114,6 +116,12 @@
                     border-left: none;
                 }
             }
+        }
+    }
+
+    @include screen('mobile') {
+        >ul {
+            padding-left: 0;
         }
     }
 }
@@ -320,6 +328,7 @@
                     &:nth-child(odd) {
                         border-left: none;
                         border-top: none;
+                        margin-bottom: 0;
                     }
                     &:hover,
                     &:focus {

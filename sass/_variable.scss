@@ -3,9 +3,9 @@
 
 //-------------------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor: #21baff; //主色
-$secondaryColor: #781f79; //輔色
-$lightColor: #fcc211; //點綴
+$primaryColor: #8fc2c1; //主色
+$secondaryColor: #656565; //輔色
+$lightColor: #f5f5f5; //點綴
 $linkColor: #21baff; //連結
 $importantColor: #ff3e4d; //重要
 // 但注意真實顏色與語意的關聯必須易於辨識
@@ -18,7 +18,7 @@ $color-purple: #aa5ac5;
 $color-gray: #ccc;
 $color-dark: #333333;
 $color-hr: #666; //hr顏色
-$color-word: #222; //一般字的顏色
+$color-word: #1a1a1a; //一般字的顏色
 // 連結顏色
 $aColor: #21baff;
 $aHover: lighten($aColor, 10);
@@ -37,9 +37,10 @@ $font-size: 1em;
 //-------------------------------------------------------------格線系統-----//
 
 // 格線系統
-$grid-columns: 12 !default; //格線欄位數
-$grid-gutter-width: 30px !default; //左右padding
-$container-max: 1200px !default; //container最大寬
+$grid-columns: 12 !default;               //格線欄位數
+$grid-gutter-width: 30px !default;        //左右padding
+$grid-gutter-width-margin: 30px !default; //左右margin
+$container-max: 1200px !default;          //container最大寬
 
 //mediaquery
 $screen-lg: 1400px !default; //電腦

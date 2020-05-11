@@ -98,7 +98,7 @@
         &.slick-active {
             button {
                 &:before {
-                    background: $aHover;
+                    background: $primaryColor;
                 }
                 &:hover,
                 &:focus {
