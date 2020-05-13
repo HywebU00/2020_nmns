@@ -2,8 +2,16 @@
 // 文章標題
 h1.title, h2.title {
     line-height: 1.25em;
-    margin: .4em 0;
+    // margin: .4em 0;
 }
+
+.Syncing_slider{ padding: 2em 0; }
+
+section{
+    &.small_size { font-size: .938em; }
+    &.large_size { font-size: 1.125em; }
+}
+
 .cp {
     .pic {
         float: left;
@@ -75,7 +83,7 @@ h1.title, h2.title {
 div.tag {
     @extend %clearfix;
     padding: .5em 0 .5em 1.5em;
-    margin-bottom: .5em;
+    margin: .75em 0;
     position:relative;
     &:before {
         display: block;
@@ -395,9 +403,9 @@ div.tag {
     font-size: 0.875em;
     line-height: 1.5em;
     list-style: none;
-    margin: 0 0 .7em 0;
+    margin: 0 0 1.5em 0;
     border-left: solid 5px $primaryColor;
-    padding: 0.8em 1.5em 0.8em;
+    padding: .8em 1.5em;
     background: #F2F2F2;
     @extend %clearfix;
      @include box-sizing;
@@ -406,6 +414,7 @@ div.tag {
     }
     li {
         width: 32%;
+        margin-top: .5em;
         margin-bottom: .5em;
         display: inline-block;
         vertical-align: top;
@@ -420,3 +429,91 @@ div.tag {
         }
     }
 }
+
+// timeline
+.timeline{
+    h3 {
+        font-size: 1.5em;
+        padding: 12px 0px 15px 0px;
+        margin: 0.5em 0px 0.2em;
+        border-bottom: 1px solid $primaryColor;
+    }
+    .box{
+        padding-left: 60px;
+        background: url(../images/timeline-line.jpg) left 28px top 0 repeat-y;
+        &:before{
+            // content:'123';
+
+            // display: block;
+            // width: 5px;
+            // height: 100px;
+            // background: #ddd;
+        }
+        .year{
+            h4{
+                font-size: 1.45em;
+                font-weight: bold;
+                color: $primaryColor;
+                position: relative;
+                line-height: 28px;
+                &:before{
+                    // 月份的點點
+                    content:'';
+                    display: block;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    background: $primaryColor;
+                    margin-left: -44px;
+                    position: absolute;
+                }
+            }
+            .memo{
+                section{
+                    h5{
+                        font-size: 1.25em;
+                        margin-bottom: 0;
+                    }
+                    ol, ul{
+                        background: #eee;
+                        padding-top: 1em;
+                        padding-bottom: 1em;
+                        padding-right: 1em;
+                        border-radius: 3px;
+                        position: relative;
+                        &:before{
+                            // 日誌的點點
+                            content:'';
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            border-radius: 50%;
+                            background: #909090;
+                            position: absolute;
+                            left: -39px;
+                        }
+                        &:after{
+                            // 日誌的箭頭
+                            content:'';
+                            display: block;
+                            width: 12px;
+                            height: 12px;
+                            background: #eee;
+                            position: absolute;
+                            transform: rotate(45deg);
+                            top: 20px;
+                            left: -6px;
+                        }
+                        li{
+                            padding: .3em 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

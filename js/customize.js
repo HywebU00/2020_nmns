@@ -123,4 +123,15 @@ $(function() {
         infinite: true
     });
     
+    // 圖文欄排版切換
+    $('.read_mode').find('.List').click(function(){
+        $('.read_mode li').removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('ul').siblings('.album').addClass('GRID');
+    });
+    $('.read_mode').find('.Grid').click(function(){
+        $('.read_mode li').removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('ul').siblings('.album').removeClass('GRID');
+    });
 });

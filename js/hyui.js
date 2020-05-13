@@ -303,9 +303,10 @@ $(function() {
         });
         $('.album .thumbnail a').each(function(index) {
             $(this).click(function(e) {
-                var THUMB_H3 = $(this).find('.img-container img').attr('alt');
+                // var THUMB_H3 = $(this).find('.img-container img').attr('alt');
+                var THUMB_H3 = $(this).find('.caption h3').text();
                 $('body').addClass('noscroll');
-                $('.album .lightbox').append('<div class="caption">' + THUMB_H3 + '<div>');
+                $('.album .lightbox').append('<div class="caption">' + THUMB_H3 + '</div>');
                 THUMB_PIC = $(this).find('.img-container img').attr('data-src');
                 $('.album .lightbox img').attr('src', THUMB_PIC);
                 $('.album .lightbox').fadeIn();
@@ -329,7 +330,8 @@ $(function() {
             THUMB_PIC = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container picture source:first').attr('data-srcset');
             // 沒寫picture
             // THUMB_PIC = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container img').attr('src');
-            THUMB_H3 = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container img').attr('alt');
+            // THUMB_H3 = $('.album .thumbnail').eq(PIC_INDEX).find('.img-container img').attr('alt');
+            THUMB_H3 = $('.album .thumbnail').eq(PIC_INDEX).find('.caption h3').text();
             $('.album .lightbox .caption').html(THUMB_H3);
             $('.album .lightbox img').hide();
             $('.album .lightbox img').fadeIn();
@@ -512,45 +514,48 @@ $(function() {
     /*------------------------------------*/
     //////////分享按鈕 share dropdwon////////
     /*------------------------------------*/
-    $('.function_panel .share').children('ul').hide();
-    $('.function_panel .share').prepend('<a href="#" class="shareButton">share分享按鈕</a>');
-    var _shareButton = $('.shareButton');
-    _shareButton.off().click(function(e) {
-        $(this).siblings('ul').stop(true, true).slideToggle();
-        e.preventDefault();
-    });
-    _shareButton.keyup(function(event) {
-        $(this).siblings('ul').stop(true, true).slideDown();
-    });
-    $('.function_panel .share').find('li:last>a').focusout(function(event) {
-        $(this).parent().parent('ul').hide();
-    });
-    // 點外面關閉share
-    $(document).on('touchend click', function(e) {
-        var container = $(".function_panel .share");
-        if (!container.is(e.target) && container.has(e.target).length === 0) {
-            $('.function_panel .share ul').hide();
-        }
-    });
+    // $('.function_panel .share').children('ul').hide();
+    // $('.function_panel .share').prepend('<a href="#" class="shareButton">share分享按鈕</a>');
+    // var _shareButton = $('.shareButton');
+    // _shareButton.off().click(function(e) {
+    //     $(this).siblings('ul').stop(true, true).slideToggle();
+    //     e.preventDefault();
+    // });
+    // _shareButton.keyup(function(event) {
+    //     $(this).siblings('ul').stop(true, true).slideDown();
+    // });
+    // $('.function_panel .share').find('li:last>a').focusout(function(event) {
+    //     $(this).parent().parent('ul').hide();
+    // });
+    // // 點外面關閉share
+    // $(document).on('touchend click', function(e) {
+    //     var container = $(".function_panel .share");
+    //     if (!container.is(e.target) && container.has(e.target).length === 0) {
+    //         $('.function_panel .share ul').hide();
+    //     }
+    // });
     /*------------------------------------*/
     /////////////字型大小 font-size//////////
     /*------------------------------------*/
     $('.font_size').find('.medium').addClass('active');
     $('.font_size').find('.small').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.cp').removeClass('large_size').addClass('small_size');
+        // $('.cp').removeClass('large_size').addClass('small_size');
+        $(this).parents('.function_panel').siblings('section').removeClass('large_size').addClass('small_size');
         $(this).addClass('active');
         e.preventDefault();
     });
     $('.font_size').find('.medium').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.cp').removeClass('large_size small_size');
+        // $('.cp').removeClass('large_size small_size');
+        $(this).parents('.function_panel').siblings('section').removeClass('large_size small_size');
         $(this).addClass('active');
         e.preventDefault();
     });
     $('.font_size').find('.large').click(function(e) {
         $(this).parent('li').siblings('li').find('a').removeClass('active');
-        $('.cp').removeClass('small_size').addClass('large_size');
+        // $('.cp').removeClass('small_size').addClass('large_size');
+        $(this).parents('.function_panel').siblings('section').removeClass('small_size').addClass('large_size');
         $(this).addClass('active');
         e.preventDefault();
     });

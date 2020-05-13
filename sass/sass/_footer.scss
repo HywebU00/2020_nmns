@@ -117,10 +117,8 @@ footer {
             margin-bottom: 1em;
          }
     }
-    @media screen and (max-width: 1024px) {
+    @include screen('xs_mobile') {
         background: url(../images/dot-white.jpg) left 0 bottom 4.8em repeat-x, $primaryColor;
-    }
-    @media screen and (max-width: 320px) {
     }
 }
 

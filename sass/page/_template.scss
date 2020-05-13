@@ -37,7 +37,7 @@ body {
     padding: 0;
     // 可先設定一個中央區塊最大寬，限制accesskey對齊
     @include screen('mobile') {
-        padding-top: 55px;
+        padding-top: 60px;
     }
     h2 {
         line-height: 1.25em;
@@ -46,9 +46,9 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
-    padding-top: 2em;
+    // padding-top: 2em;
     @include screen('mobile') {
-        padding-top: 5em;
+        // padding-top: 5em;
     }
     >.container {
         @include gutter(); //gutter 代表左右要留白

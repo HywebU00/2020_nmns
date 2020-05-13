@@ -2,6 +2,10 @@
     @extend %clearfix;
     text-align: left;
     margin: 1em auto;
+    &:before{
+        content:'分類篩選：';
+        padding: .5em 0;
+    }
     ul {
         @include li-reset;
         li {
@@ -11,11 +15,11 @@
         }
     }
     a {
-        @include gradient(#FFF, #DDD, vertical);
+        @include gradient(#888, #666, vertical);
         border: 1px solid #CCC;
         padding: .4em 1em;
         display: block;
-        color: #333;
+        color: #fff;
         @include box-sizing();
         border-radius:4px;
         &:hover,
