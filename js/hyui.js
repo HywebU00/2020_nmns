@@ -214,6 +214,7 @@ $(function() {
     //     $('.m_search').hide();
     //     search_mode = false;
     // });
+
     // 固定版頭
     hh = Math.floor($('.header').outerHeight(true));
     if ($('header').has('menu')) {
@@ -235,6 +236,24 @@ $(function() {
             }
         });
     }
+
+    // hh = Math.floor($('.header').outerHeight(true));
+    // $(window).bind("load resize", function(e) {
+    //     if (_window.outerWidth() >= wwSmall){
+    //         var stickyMenuTop = Math.floor($('.header .menu').offset().top);
+    //         menuH = Math.floor(_menu.outerHeight(true));
+    //         if ($(this).scrollTop() > stickyMenuTop) {
+    //             $('.header').addClass('fixed');
+    //             $('.header').css('margin-top', menuH - hh);
+    //             $('.main').css('margin-top', hh);
+    //         } else {
+    //             $('.header').removeClass('fixed');
+    //             $('.header').css('margin-top', 0);
+    //             $('.main').css('margin-top', 0);
+    //         };
+            
+    //     };
+    // });
     /*-----------------------------------*/
     //////////// notice訊息區塊 ////////////
     /*-----------------------------------*/

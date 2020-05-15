@@ -114,7 +114,10 @@
                 box-shadow: 0 0 3em -1em rgba(0,0,0,0.5);
                 transition: box-shadow .6s ease;
             }
-
+            .img-container{
+                background: url(../images/img-default-bg.svg) 50% 50% no-repeat, #bfdcdb;
+                background-size: 180px 180px;
+            }
             .caption{
                 text-align: left;
                 width: 100%;
@@ -122,7 +125,7 @@
                 // background: #eee;
 
                 time{}
-                h3{}
+                h3{ margin: .4em 0; }
                 p{ margin-top: .5em; }
                 h3, p{
                     overflow: hidden;
@@ -164,6 +167,10 @@
                 flex: 1 1 100%;
                 max-width: 100%;
                 margin-bottom: 2em;
+
+                .caption{
+                    padding: 2em 1.25em;
+                }
             }
 
             // 圖文瀏覽
