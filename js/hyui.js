@@ -112,8 +112,8 @@ $(function() {
             _overlay.hide();
             _nav.prependTo(_mArea);
             _menu.prependTo(_mArea);
-            _search.prependTo(_body);
-            _search.addClass('m_search');
+            // _search.prependTo(_body);
+            // _search.addClass('m_search');
             _mArea.css({
                 'margin-left': _mArea.width() * -1 + 'px'
             });
@@ -150,8 +150,8 @@ $(function() {
                 e.preventDefault();
             });
             _body.off('touchmove');
-            $('.m_search').hide();
-            $('.language').find('ul').hide();
+            // $('.m_search').hide();
+            // $('.language').find('ul').hide();
         } else {
             /*-----------------------------------*/
             /////////////// PC版設定 /////////////
@@ -217,7 +217,8 @@ $(function() {
     // 固定版頭
     hh = Math.floor($('.header').outerHeight(true));
     if ($('header').has('menu')) {
-        var stickyMenuTop = Math.floor($('.header .menu').offset().top);
+        // var stickyMenuTop = Math.floor($('.header .menu').offset().top);
+        var stickyMenuTop = 152;
         // console.log(stickyMenuTop);
         hh = Math.floor($('.header').outerHeight(true));
         menuH = Math.floor(_menu.outerHeight(true));
