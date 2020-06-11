@@ -145,6 +145,9 @@
         li {
             float: left;
             // margin: 0 .2em;
+            background: url(../images/nav-link-bg.jpg) left 50% no-repeat;
+            &:first-child{ background: none; }
+
             a {
                 display: inline-block;
                 padding: .5em;
@@ -154,14 +157,14 @@
 
                 @include aSetting_nocolor;
 
-                &:after{
-                    content:'';
-                    display: block;
-                    width: 1px;
-                    height: 20px;
-                    // margin-left: -4px;
-                    background: url(../images/nav-link-bg.jpg) left 50% no-repeat;
-                }
+                // &:after{
+                //     content:'';
+                //     display: block;
+                //     width: 1px;
+                //     height: 20px;
+                //     // margin-left: -4px;
+                //     background: url(../images/nav-link-bg.jpg) left 50% no-repeat;
+                // }
                 
                 &.home, &.sitemap, &.contact{
                     font-size: 0;
