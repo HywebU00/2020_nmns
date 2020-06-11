@@ -501,8 +501,8 @@ $(function() {
             $container.has('.cover').css('backgroundImage', 'url(' + imgUrl + ')');
             $container.has('.fill').addClass('ie-object-fill');
             $container.has('.fill').css('backgroundImage', 'url(' + imgUrl + ')');
-            $container.has('.contain').addClass('ie-object-contain');
-            $container.has('.contain').css('backgroundImage', 'url(' + imgUrl + ')');
+            // $container.has('.contain').addClass('ie-object-contain');
+            // $container.has('.contain').css('backgroundImage', 'url(' + imgUrl + ')');
         });
     }
     /*-----------------------------*/
