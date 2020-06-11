@@ -43,7 +43,7 @@ footer {
         @extend %flex_setting;
         align-items: center;
 
-        img{ height: 90px; }
+        img{ height: 90px;  width: 100px;}
         p{
             @include gutter;
             margin: 0;
