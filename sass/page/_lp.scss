@@ -120,6 +120,11 @@
                 // background: url(../images/img-default-bg.jpg) 50% 50% no-repeat;
                 // background-size: cover;
                 // background: #e8e8e8;
+
+                img{
+                    max-width: 100% !important;
+                    max-height: 100% !important;
+                }
             }
             .caption{
                 text-align: left;
