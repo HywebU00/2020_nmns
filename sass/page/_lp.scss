@@ -115,8 +115,10 @@
                 transition: box-shadow .6s ease;
             }
             .img-container{
-                background: url(../images/img-default-bg.svg) 50% 50% no-repeat, #e8e8e8;
-                background-size: 180px 180px;
+                // background: url(../images/img-default-bg.svg) 50% 50% no-repeat, #e8e8e8;
+                // background-size: 180px 180px;
+                background: url(../images/img-default-bg.jpg) 50% 50% no-repeat;
+                background-size: cover;
             }
             .caption{
                 text-align: left;
