@@ -12,53 +12,53 @@
     <![endif]-->
     <!-- hyUI -->
     <link rel="stylesheet" href="css/hyui.css">
-<style>
-    .demo_wrap {
-        max-width: 1000px;
-        margin: 0em auto 1em;
-        padding: 15px 15px 3em;
-        clear: both;
-        background: #FFF
-    }
-    .demo_wrap h1 {
-        display: block;
-        margin: 0px auto;
-        max-width: 300px;
-        float: left;
-        margin-right: 1em
-    }
-    @media screen and (max-width:545px) {
+    <style>
+        .demo_wrap {
+            max-width: 1000px;
+            margin: 0em auto 1em;
+            padding: 15px 15px 3em;
+            clear: both;
+            background: #FFF
+        }
         .demo_wrap h1 {
-            max-width: 100%;
-            float: none;
-            text-align: center
+            display: block;
+            margin: 0px auto;
+            max-width: 300px;
+            float: left;
+            margin-right: 1em
         }
-    }
-    .demo_wrap h1 img { width: 300px }
-    .num { width: 12% }
-    body { counter-reset: num }
-    table { margin-bottom: 1em }
-    table caption {
-        text-align: left;
-        font-weight: bold;
-        font-size: 1.25em;
-        padding: .5em 0;
-        color: #ff5050
-    }
-    tbody tr td:first-child:before {
-        counter-increment: num;
-        display: block;
-        text-align: center;
-        content: counters(num, ".") " "
-    }
-    tbody tr td:nth-child(2) { width: 35% }
-    .btn_grp{ text-align: right; }
-    @media screen and (max-width:545px) {
-       .btn_grp{
+        @media screen and (max-width:545px) {
+            .demo_wrap h1 {
+                max-width: 100%;
+                float: none;
+                text-align: center
+            }
+        }
+        .demo_wrap h1 img { width: 300px }
+        .num { width: 12% }
+        body { counter-reset: num }
+        table { margin-bottom: 1em }
+        table caption {
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.25em;
+            padding: .5em 0;
+            color: #ff5050
+        }
+        tbody tr td:first-child:before {
+            counter-increment: num;
+            display: block;
             text-align: center;
+            content: counters(num, ".") " "
         }
-    }
-</style>
+        tbody tr td:nth-child(2) { width: 35% }
+        .btn_grp{ text-align: right; }
+        @media screen and (max-width:545px) {
+           .btn_grp{
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="demo_wrap">
@@ -93,6 +93,11 @@
                         <td></td>
                         <td>標準內容頁 + timeline</td>
                         <td><a href="cp.html"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>內容頁 人物誌</td>
+                        <td><a href="cp2.html"></a></td>
                     </tr>
                     <tr>
                         <td></td>

@@ -514,6 +514,92 @@ div.tag {
     }
 }
 
+// 人物誌
+table.figure{
+    margin: 0 0 .75em;
+    p{
+        margin-bottom: 0;
+    }
+    th{
+        vertical-align: top;
+        width: 300px;
+        padding: 0;
+    }
+    td{
+        padding: 1.5em 1em;
+    }
+    img {max-width:300px;}
+
+    @include screen('tablet') {
+        display: block; 
+        min-width:100% !important;
+        vertical-align: top;;
+
+        thead, tbody, tr, th, td{
+            display: block; 
+            min-width:100% !important;
+            vertical-align: top;;
+        }
+
+        thead tr { 
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+
+            border: 1px solid #ccc;
+
+            td{
+                border: none;
+                border-bottom: 1px solid #eee; 
+                position: relative;
+                &:before { 
+                    /* Now like a table header */
+                    position: absolute;
+                    /* Top/left values mimic padding */
+                    top: 6px;
+                    left: 6px;
+                    width: 45%; 
+                    padding-right: 10px; 
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+// th{ vertical-align: top;}
+// table.figure th{width:30%;}
+// table.figure img {max-width:300px;}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+    // table.figure, table.figure thead, table.figure tbody, table.figure th, table.figure td, table.figure tr { 
+    //     display: block; 
+    //     min-width:100% !important;
+    //     vertical-align: top;;
+    // }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    // table.figure thead tr { 
+    //     position: absolute;
+    //     top: -9999px;
+    //     left: -9999px;
+    // }
+    
+    // table.figure tr { border: 1px solid #ccc; }
+    // table.figure img {max-width:100%;}
+    
+    // table.figure td { 
+    //     /* Behave  like a "row" */
+    //     border: none;
+    //     border-bottom: 1px solid #eee; 
+    //     position: relative;
+    // }
+    
+    
+}
+
 
 
 
