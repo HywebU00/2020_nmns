@@ -140,7 +140,20 @@ h3.title{
         .slick-prev, .slick-next{
             // top: calc(100% / 2 - 30px);
             // display: none !important;
+            background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat ,RGBA(255, 255, 255, 0);
+            border: solid 1px RGBA(255, 255, 255, .25);
+            background-size: 30px 30px;
+
+            &:hover, &:focus{
+                border: solid 1px RGBA(255, 255, 255, .635);
+            }
         }
+        .slick-prev{}
+        .slick-next{
+            background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat ,RGBA(255, 255, 255, 0);
+            background-size: 30px 30px;
+        }
+
         .slick-dots{
             bottom: 16px;
             padding: 0;
@@ -266,7 +279,22 @@ h3.title{
                 z-index: 0;
             }
         }
-        .mpSlider {}
+        .mpSlider {
+            height: 320px;
+            .slick-prev, .slick-next{
+                top: 50%;
+            }
+            .slick-dots{
+                bottom: -30px;
+            }
+            .img-container{
+                height: 320px;
+                img{
+                    width: auto !important;
+                    // left: -25%;
+                }
+            }
+        }
         .News{
             @include gutter();
             .list{
@@ -291,6 +319,16 @@ h3.title{
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+
+    @include screen('xs_mobile') {
+        .mpSlider {
+            .img-container{
+                img{
+                    left: -25%;
                 }
             }
         }
@@ -331,13 +369,19 @@ h3.title{
                 .info{
                     position: absolute;
                     z-index: 2;
-                    padding: 1em 2em 2em;
+                    // padding: 1em 2em 2em;
                     font-size: 1.35em;
                     color: #fff;
+                    height: 100%;
+                    width: 100%;
+                    display: block;
                 }
 
                 a{
                     color: #fff;
+                    height: 100%;
+                    display: block;
+                    padding: 1em 2em 2em;
                     h4{
                         &:after{
                             content:'';
@@ -468,7 +512,7 @@ h3.title{
                 &:nth-child(5),
                 &:nth-child(6),
                 &:nth-child(7){
-                    background-size: 150%;
+                    background-size: 160%;
                 }
                 &:hover{
                     &:nth-child(1),
@@ -517,9 +561,8 @@ h3.title{
                 height: 250px;
 
                 .info{
-                    padding: 1em 1.5em;
-                    a{
-                    }
+                    // padding: 1em 1.5em;
+                    a{}
                 }
 
                 &:nth-child(1), &:nth-child(5){ height: 250px; }
